@@ -41,9 +41,7 @@ var triggered bool
 
 func main() {
 
-	if err := godotenv.Load(); err != nil {
-		log.Info("Could not load env variables: ", err)
-	}
+	godotenv.Load("/home/.env")
 
 	centerCodes := strings.Split(os.Getenv("COWIN_CENTER_CODES"), ",")
 
